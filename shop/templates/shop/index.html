@@ -1,0 +1,68 @@
+{% extends 'shop/layouts/main.html' %}
+{% block content %}
+{% include 'shop/inc/slider.html' %}
+<section class=" py-4 my-5">
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1></h1>
+            <hr>
+        </div>
+        {% for item in catagory %}
+        <div class="col-md-4 col-lg-3">
+            <div class="card my-3">
+                <img src="{{item.image.url}}" class="card-image-top" alt="categories">
+                <a href="#"><hr>
+                <div class="card-body">
+                    <h5>{{ item.name }}</h5>
+                    <p>{{ item.description }}</p>
+                </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div> 
+</section>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<footer class="footer center">
+    <div class="footer-content">
+      <p>&copy; 2024 Skandamani T G. All rights reserved.</p>
+      <p><a href="mailto:skan@example.com">Contact: skan@example.com</a></p>
+    </div>
+    <div class="social-media">
+      <a href="https://www.linkedin.com/in/your-linkedin-profile"><i class="fa fa-linkedin"></i></a>
+      <a href="https://github.com/your-github-username"><i class="fa fa-github"></i></a>
+    </div>
+  </footer>
+  
+  <style>
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #87CEEB; /* Sky blue color */
+      color: #fff;
+    }
+  
+    .footer-content {
+      flex: 1;
+    }
+  
+    .social-media {
+      display: flex;
+      gap: 1rem;
+    }
+  
+    .social-media a {
+      color: inherit;
+    }
+  
+    .fa-linkedin, .fa-github {
+      font-size: 1.5rem; /* Adjust icon size as needed */
+    }
+  </style>
+{% endblock content %}

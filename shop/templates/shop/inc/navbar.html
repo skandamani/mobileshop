@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #00BCD4;  
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #00BCD4; 
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000000d6;
+            margin-left: 40px;
+             
+            
+        }
+        .logo a{
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+             
+        }
+        .search-bar {
+            display: flex;
+            flex: 1;
+            margin: 0 20px;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 50px;
+            border: none;
+            outline: none;
+        }
+        .nav-links {
+            
+            display: flex;
+            gap: 110px;
+            align-items: center;
+            font-size: larger;
+        }
+        .nav-links a {
+            text-shadow: rgb(0, 0, 0);
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            margin-left: 60px;
+        }
+        .cart-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .cart-icons a {
+            font-weight: bold;  
+            font-size: 20px;
+            cursor: pointer;
+        }
+        hr{
+            box-shadow: inset;
+        }
+         
+    </style>
+</head>
+<body>
+
+    <header class="header">
+       <div class="logo">
+        <a href="{% url 'home' %}">Mobile Shop</a>
+       </div>
+        <div class="search-bar">
+            <input  type="text" placeholder="Search for products, brands and more">
+        </div>
+       
+        <div class="cart-icons">
+            <a><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+            <a><i class="fa-regular fa-heart"></i> Like</a>
+            <a><i class="fa-solid fa-user"></i> Register</a>
+        </div>
+    </header><hr>
+    <div class="nav-links">
+        <a href="#">MOBILES <i class="fa-solid fa-chevron-down"></i></i></a>
+        <a href="#">ACCESSORIES <i class="fa-solid fa-chevron-down"></i></i></a>
+        <a href="#">GADGETS <i class="fa-solid fa-chevron-down"></i></i></a>
+        <a href="#">SERVICES</a>
+        <a href="#">ABOUT</a>
+        <a href="#">CONTACT</a>
+    </div><br>
+
+ 
+
+</body>
+</html>
